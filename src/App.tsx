@@ -6,9 +6,10 @@ import ObjectsPage from "./pages/ObjectsPage";
 import MapPage from "./pages/MapPage";
 import GalleryPage from "./pages/GalleryPage";
 import ContactsPage from "./pages/ContactsPage";
+import DistrictsPage from "./pages/DistrictsPage";
 import Navigation from "./components/Navigation";
 
-export type Section = "home" | "objects" | "map" | "gallery" | "contacts";
+export type Section = "home" | "objects" | "map" | "gallery" | "districts" | "contacts";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<Section>("home");
@@ -19,6 +20,7 @@ export default function App() {
       case "objects": return <ObjectsPage />;
       case "map": return <MapPage />;
       case "gallery": return <GalleryPage />;
+      case "districts": return <DistrictsPage />;
       case "contacts": return <ContactsPage />;
     }
   };

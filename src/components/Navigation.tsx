@@ -12,6 +12,7 @@ const navItems: { id: Section; label: string }[] = [
   { id: "objects", label: "Объекты" },
   { id: "map", label: "Карта" },
   { id: "gallery", label: "Галерея" },
+  { id: "districts", label: "Районы" },
   { id: "contacts", label: "Контакты" },
 ];
 
