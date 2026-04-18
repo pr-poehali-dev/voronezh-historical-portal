@@ -1,28 +1,37 @@
-
+import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import HomePage from "./pages/HomePage";
+import ObjectsPage from "./pages/ObjectsPage";
+import MapPage from "./pages/MapPage";
+import GalleryPage from "./pages/GalleryPage";
+import ContactsPage from "./pages/ContactsPage";
+import Navigation from "./components/Navigation";
 
-const queryClient = new QueryClient();
+export type Section = "home" | "objects" | "map" | "gallery" | "contacts";
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+export default function App() {
+  const [activeSection, setActiveSection] = useState<Section>("home");
+
+  const renderPage = () => {
+    switch (activeSection) {
+      case "home": return <HomePage onNavigate={setActiveSection} />;
+      case "objects": return <ObjectsPage />;
+      case "map": return <MapPage />;
+      case "gallery": return <GalleryPage />;
+      case "contacts": return <ContactsPage />;
+    }
+  };
+
+  return (
     <TooltipProvider>
       <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="min-h-screen bg-background text-foreground">
+        <Navigation activeSection={activeSection} onNavigate={setActiveSection} />
+        <main key={activeSection} className="animate-fade-in">
+          {renderPage()}
+        </main>
+      </div>
     </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
+  );
+}

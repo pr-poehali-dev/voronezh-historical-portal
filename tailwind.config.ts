@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1776501786019508977.html"
 	],
 	prefix: "",
 	theme: {
@@ -88,7 +89,10 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease forwards',
+				'slide-up': 'slide-up 0.4s ease forwards',
+				'scale-in': 'scale-in 0.3s ease forwards',
 			}
 		}
 	},
