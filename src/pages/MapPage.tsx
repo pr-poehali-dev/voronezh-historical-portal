@@ -12,23 +12,25 @@ interface MapPoint {
 }
 
 const points: MapPoint[] = [
-  { id: 1, name: "Брестская крепость", type: "Крепость", era: "XX век", x: 12, y: 42, year: "1941" },
-  { id: 2, name: "Ленинград", type: "Оборонительный рубеж", era: "XX век", x: 32, y: 22, year: "1941–1944" },
-  { id: 3, name: "Москва", type: "Поле сражения", era: "XX век", x: 42, y: 32, year: "1941" },
-  { id: 4, name: "Сталинград", type: "Поле сражения", era: "XX век", x: 52, y: 50, year: "1942–1943" },
-  { id: 5, name: "Курская дуга", type: "Поле сражения", era: "XX век", x: 44, y: 42, year: "1943" },
-  { id: 6, name: "Куликово поле", type: "Поле сражения", era: "XIV век", x: 46, y: 40, year: "1380" },
-  { id: 7, name: "Бородино", type: "Поле сражения", era: "XIX век", x: 38, y: 34, year: "1812" },
-  { id: 8, name: "Полтава", type: "Поле сражения", era: "XVIII век", x: 40, y: 52, year: "1709" },
-  { id: 9, name: "Кронштадт", type: "Крепость", era: "XVIII век", x: 30, y: 20, year: "1704" },
-  { id: 10, name: "Севастополь", type: "Крепость", era: "XIX–XX век", x: 42, y: 64, year: "1854–1855, 1942" },
+  { id: 1, name: "Диорама «Разгром немецко-фашистских войск под Воронежем»", type: "Музей", era: "XX век", x: 48, y: 34, year: "1941–1943" },
+  { id: 2, name: "Чижовский плацдарм", type: "Мемориал", era: "XX век", x: 50, y: 40, year: "1942–1943" },
+  { id: 3, name: "Памятник Славы", type: "Мемориал", era: "XX век", x: 46, y: 38, year: "1967" },
+  { id: 4, name: "Воронежская крепость (место основания)", type: "Крепость", era: "XVI–XVII вв.", x: 47, y: 35, year: "1586" },
+  { id: 5, name: "Петровский корабельный арсенал", type: "Крепость", era: "XVII–XVIII вв.", x: 49, y: 36, year: "1696" },
+  { id: 6, name: "Братская могила на Проспекте Революции", type: "Мемориал", era: "XX век", x: 47, y: 37, year: "1943" },
+  { id: 7, name: "Усманский оборонительный вал", type: "Укрепление", era: "XVII век", x: 38, y: 22, year: "1636" },
+  { id: 8, name: "Хренищенская засека", type: "Укрепление", era: "XVII век", x: 55, y: 62, year: "1640-е" },
+  { id: 9, name: "Костёнки — стоянка древнего человека", type: "Музей", era: "Древняя история", x: 44, y: 48, year: "45 000 лет до н.э." },
+  { id: 10, name: "Мемориал «Высота 178,0»", type: "Мемориал", era: "XX век", x: 40, y: 36, year: "1942" },
+  { id: 11, name: "Острогожско-Россошанская операция", type: "Поле сражения", era: "XX век", x: 42, y: 72, year: "Январь 1943" },
 ];
 
 const typeColors: Record<string, string> = {
   "Крепость": "#C9973A",
   "Поле сражения": "#8B1A1A",
-  "Оборонительный рубеж": "#4A6741",
+  "Укрепление": "#4A6741",
   "Мемориал": "#5B6FA8",
+  "Музей": "#7A6020",
 };
 
 export default function MapPage() {
@@ -36,7 +38,7 @@ export default function MapPage() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [filter, setFilter] = useState("Все");
 
-  const types = ["Все", "Крепость", "Поле сражения", "Оборонительный рубеж"];
+  const types = ["Все", "Мемориал", "Крепость", "Укрепление", "Поле сражения", "Музей"];
 
   const visiblePoints = filter === "Все" ? points : points.filter((p) => p.type === filter);
 
@@ -84,7 +86,7 @@ export default function MapPage() {
 
             {/* Stylized map silhouette of Russia */}
             <div className="absolute inset-0 flex items-center justify-center opacity-5">
-              <span className="font-oswald text-[20rem] text-gold leading-none select-none">РФ</span>
+              <span className="font-oswald text-[20rem] text-gold leading-none select-none">ВО</span>
             </div>
 
             {/* Border decorations */}

@@ -6,10 +6,10 @@ interface Props {
 }
 
 const stats = [
-  { value: "1 200+", label: "Исторических объектов" },
-  { value: "XVIII–XX", label: "Века охвата" },
-  { value: "47", label: "Регионов России" },
-  { value: "3 800+", label: "Архивных фотографий" },
+  { value: "200+", label: "Объектов Воронежской области" },
+  { value: "XVI–XX", label: "Века охвата" },
+  { value: "212", label: "Дней обороны Воронежа" },
+  { value: "550+", label: "Архивных фотографий" },
 ];
 
 const features = [
@@ -59,7 +59,7 @@ export default function HomePage({ onNavigate }: Props) {
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-gold" />
               <span className="font-mono-ibm text-xs text-gold tracking-[0.3em] uppercase">
-                Военно-исторический портал
+                Воронежская область · Военно-исторический портал
               </span>
             </div>
 
@@ -70,7 +70,7 @@ export default function HomePage({ onNavigate }: Props) {
             </h1>
 
             <p className="font-cormorant text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
-              Сохраняем память о военной истории России. Каждый объект — свидетель эпохи, каждый факт — часть нашего наследия.
+              Сохраняем память о военной истории Воронежской области — от крепостей XVI века до мемориалов Великой Отечественной. Каждый объект — свидетель эпохи.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -161,9 +161,10 @@ export default function HomePage({ onNavigate }: Props) {
                   Объект месяца
                 </p>
                 <h3 className="font-oswald text-3xl md:text-5xl text-parchment mb-4 leading-tight">
-                  КУРСКАЯ ДУГА
+                  ЧИЖОВСКИЙ
+                  <br />ПЛАЦДАРМ
                   <br />
-                  <span className="text-gold">1943 год</span>
+                  <span className="text-gold">212 дней обороны</span>
                 </h3>
                 <button
                   onClick={() => onNavigate("objects")}
