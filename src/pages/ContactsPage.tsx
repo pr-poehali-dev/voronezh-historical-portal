@@ -11,10 +11,10 @@ export default function ContactsPage() {
   };
 
   const contacts = [
-    { icon: "MapPin", label: "Адрес", value: "Москва, ул. Историческая, д. 1" },
-    { icon: "Phone", label: "Телефон", value: "+7 (495) 000-00-00" },
-    { icon: "Mail", label: "Email", value: "info@khronika-voiny.ru" },
-    { icon: "Clock", label: "Часы работы", value: "Пн–Пт: 9:00 – 18:00" },
+    { icon: "MapPin", label: "Адрес", value: "г. Россошь, пл. Октябрьская, 217" },
+    { icon: "Phone", label: "Телефон", value: "+7 (930) 405-XX-XX" },
+    { icon: "Mail", label: "Email", value: "alenkab0zhko@yandex.ru" },
+    { icon: "Clock", label: "Часы работы", value: "Пн-Пт: 8:00 - 17:00" },
   ];
 
   return (
@@ -78,7 +78,7 @@ export default function ContactsPage() {
                 <p className="font-cormorant text-sm text-muted-foreground leading-relaxed italic">
                   «Кто не знает своего прошлого, не имеет будущего»
                 </p>
-                <span className="font-mono-ibm text-xs text-gold/60 mt-2 block">— народная мудрость</span>
+                <span className="font-mono-ibm text-xs text-gold/60 mt-2 block">народная мудрость</span>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function ContactsPage() {
                 </div>
                 <h2 className="font-oswald text-2xl text-parchment mb-3 tracking-wide">Сообщение отправлено</h2>
                 <p className="font-cormorant text-muted-foreground text-lg max-w-xs">
-                  Мы ответим в течение 1–2 рабочих дней
+                  Мы ответим в течение 1-2 рабочих дней
                 </p>
                 <button
                   onClick={() => { setSent(false); setForm({ name: "", email: "", subject: "", message: "" }); }}

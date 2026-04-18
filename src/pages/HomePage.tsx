@@ -44,8 +44,8 @@ export default function HomePage({ onNavigate }: Props) {
       <section
         className="relative min-h-[94vh] flex items-end overflow-hidden"
         style={{
-          backgroundImage: `url('https://cdn.poehali.dev/projects/7f5707bb-d00c-4e46-a06f-57d76191a81b/files/6980446a-bcb9-4da9-ba67-6b1feb348162.jpg')`,
-          backgroundSize: "cover", backgroundPosition: "center 30%",
+          backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/d/d9/%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0_%D1%80%D0%B5%D0%BA%D0%B8_%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6_%D1%81_%D0%BC%D0%BE%D1%81%D1%82%D0%B0_%D0%B2_%D0%A0%D0%B0%D0%BC%D0%BE%D0%BD%D0%B8.jpg')`,
+          backgroundSize: "cover", backgroundPosition: "center 40%",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/10" />
@@ -164,7 +164,7 @@ export default function HomePage({ onNavigate }: Props) {
         <div className="max-w-7xl mx-auto">
           <div className="relative h-72 md:h-[420px] overflow-hidden"
             style={{
-              backgroundImage: `url('https://cdn.poehali.dev/projects/7f5707bb-d00c-4e46-a06f-57d76191a81b/files/49352788-0eea-46a1-b9dd-39c358a512e1.jpg')`,
+              backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/0/00/023._Voronezh._Victory_Square._Alley_of_Glory.jpg')`,
               backgroundSize: "cover", backgroundPosition: "center",
             }}>
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/50 to-background/5" />
@@ -176,7 +176,7 @@ export default function HomePage({ onNavigate }: Props) {
                   <span className="text-gold">212 дней обороны</span>
                 </h3>
                 <p className="font-cormorant text-muted-foreground text-lg mb-6 max-w-sm hidden md:block">
-                  Место одного из самых трагических эпизодов борьбы за Воронеж. 1942–1943 гг.
+                  Место одного из самых трагических эпизодов борьбы за Воронеж. 1942-1943 гг.
                 </p>
                 <button onClick={() => onNavigate("objects")}
                   className="flex items-center gap-2 text-gold font-oswald text-xs tracking-[0.2em] uppercase hover:gap-4 transition-all">
@@ -230,7 +230,7 @@ export default function HomePage({ onNavigate }: Props) {
                 Проект создан для систематизации и популяризации военно-исторического наследия Воронежской области. Мы собираем данные об исторических объектах, готовим аудиогиды, публикуем архивные материалы.
               </p>
               <p className="font-cormorant text-lg text-muted-foreground leading-relaxed mb-8">
-                Если вы знаете о забытом мемориале, неизвестном укреплении или хотите поделиться семейными архивами — напишите нам. Каждый вклад важен.
+                Если вы знаете о забытом мемориале, неизвестном укреплении или хотите поделиться семейными архивами, напишите нам. Каждый вклад важен.
               </p>
               <button onClick={() => onNavigate("contacts")}
                 className="flex items-center gap-2 px-8 py-3 border border-gold/50 text-parchment font-oswald text-sm tracking-[0.1em] uppercase hover:border-gold hover:text-gold transition-colors">
@@ -280,7 +280,6 @@ export default function HomePage({ onNavigate }: Props) {
                 {[
                   { label: "Объекты", id: "objects" },
                   { label: "Карта", id: "map" },
-                  { label: "Галерея", id: "gallery" },
                   { label: "Районы", id: "districts" },
                 ].map((l) => (
                   <button key={l.id} onClick={() => onNavigate(l.id as Section)}
