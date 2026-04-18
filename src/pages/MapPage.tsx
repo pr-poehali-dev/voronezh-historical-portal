@@ -6,23 +6,105 @@ interface MapPoint {
   name: string;
   type: string;
   era: string;
-  x: number;
-  y: number;
   year: string;
+  address: string;
+  lat: number;
+  lng: number;
+  desc: string;
 }
 
 const points: MapPoint[] = [
-  { id: 1, name: "Диорама «Разгром немецко-фашистских войск под Воронежем»", type: "Музей", era: "XX век", x: 48, y: 34, year: "1941–1943" },
-  { id: 2, name: "Чижовский плацдарм", type: "Мемориал", era: "XX век", x: 50, y: 40, year: "1942–1943" },
-  { id: 3, name: "Памятник Славы", type: "Мемориал", era: "XX век", x: 46, y: 38, year: "1967" },
-  { id: 4, name: "Воронежская крепость (место основания)", type: "Крепость", era: "XVI–XVII вв.", x: 47, y: 35, year: "1586" },
-  { id: 5, name: "Петровский корабельный арсенал", type: "Крепость", era: "XVII–XVIII вв.", x: 49, y: 36, year: "1696" },
-  { id: 6, name: "Братская могила на Проспекте Революции", type: "Мемориал", era: "XX век", x: 47, y: 37, year: "1943" },
-  { id: 7, name: "Усманский оборонительный вал", type: "Укрепление", era: "XVII век", x: 38, y: 22, year: "1636" },
-  { id: 8, name: "Хренищенская засека", type: "Укрепление", era: "XVII век", x: 55, y: 62, year: "1640-е" },
-  { id: 9, name: "Костёнки — стоянка древнего человека", type: "Музей", era: "Древняя история", x: 44, y: 48, year: "45 000 лет до н.э." },
-  { id: 10, name: "Мемориал «Высота 178,0»", type: "Мемориал", era: "XX век", x: 40, y: 36, year: "1942" },
-  { id: 11, name: "Острогожско-Россошанская операция", type: "Поле сражения", era: "XX век", x: 42, y: 72, year: "Январь 1943" },
+  {
+    id: 1, name: "Диорама «Разгром немецко-фашистских войск под Воронежем»",
+    type: "Музей", era: "XX век", year: "1941–1943",
+    address: "ул. Степана Разина, 43, Воронеж",
+    lat: 51.6822, lng: 39.1817,
+    desc: "Крупнейшая диорама Центрального Черноземья. Полотно 42 м изображает бои за освобождение Воронежа в январе 1943 года.",
+  },
+  {
+    id: 2, name: "Чижовский плацдарм",
+    type: "Мемориал", era: "XX век", year: "1942–1943",
+    address: "Ленинский район, Воронеж",
+    lat: 51.6478, lng: 39.2198,
+    desc: "212 дней ожесточённых боёв. Советские войска удерживали плацдарм на правом берегу реки Воронеж.",
+  },
+  {
+    id: 3, name: "Памятник Славы",
+    type: "Мемориал", era: "XX век", year: "1967",
+    address: "ул. Ворошилова, 25, Воронеж",
+    lat: 51.7045, lng: 39.1650,
+    desc: "Главный мемориал города. 40-метровый обелиск, Вечный огонь, захоронения 10 тысяч воинов.",
+  },
+  {
+    id: 4, name: "Воронежская крепость (место основания)",
+    type: "Крепость", era: "XVI–XVII вв.", year: "1586",
+    address: "Петровский сквер, Воронеж",
+    lat: 51.6631, lng: 39.1986,
+    desc: "Место основания Воронежской крепости в 1586 году — первого форпоста Московского государства на юге.",
+  },
+  {
+    id: 5, name: "Петровский корабельный арсенал",
+    type: "Крепость", era: "XVII–XVIII вв.", year: "1696",
+    address: "Набережная Массалитинова, Воронеж",
+    lat: 51.6600, lng: 39.1969,
+    desc: "Место строительства первого российского военно-морского флота по указу Петра I для Азовских походов.",
+  },
+  {
+    id: 6, name: "Братская могила на Проспекте Революции",
+    type: "Мемориал", era: "XX век", year: "1943",
+    address: "Проспект Революции, Воронеж",
+    lat: 51.6706, lng: 39.1897,
+    desc: "Захоронение советских воинов, павших при освобождении Воронежа 25 января 1943 года.",
+  },
+  {
+    id: 7, name: "Усманский оборонительный вал",
+    type: "Укрепление", era: "XVII век", year: "1636",
+    address: "Окрестности г. Усмань, Липецкая обл.",
+    lat: 51.8633, lng: 39.7369,
+    desc: "Часть Белгородской засечной черты. Земляные укрепления защищали южные рубежи Московского государства от кочевников.",
+  },
+  {
+    id: 8, name: "Хренищенская засека",
+    type: "Укрепление", era: "XVII век", year: "1640-е",
+    address: "Хреновской бор, Бобровский район",
+    lat: 51.1261, lng: 40.0781,
+    desc: "Южный участок Белгородской черты. Лесные завалы и земляные валы — уникальный памятник фортификации XVII века.",
+  },
+  {
+    id: 9, name: "Музей-заповедник «Костёнки»",
+    type: "Музей", era: "Древняя история", year: "45 000 лет до н.э.",
+    address: "с. Костёнки, Хохольский район",
+    lat: 51.3831, lng: 39.0586,
+    desc: "Одно из богатейших мест находок палеолита в мире. Стоянки древних охотников на мамонтов.",
+  },
+  {
+    id: 10, name: "Мемориал «Высота 178,0»",
+    type: "Мемориал", era: "XX век", year: "1942",
+    address: "Вблизи с. Русская Гвоздёвка, Семилукский район",
+    lat: 51.6900, lng: 38.9700,
+    desc: "Место ожесточённых боёв за господствующую высоту. Советские воины остановили продвижение немцев к Воронежу.",
+  },
+  {
+    id: 11, name: "Урочище Лощиново (Острогожско-Россошанская операция)",
+    type: "Поле сражения", era: "XX век", year: "Январь 1943",
+    address: "Вблизи с. Лощиново, Острогожский район",
+    lat: 50.8800, lng: 39.0600,
+    desc: "Место одной из крупнейших операций ВОВ. Окружена и уничтожена 200-тысячная группировка противника.",
+  },
+  {
+    id: 12, name: "Мемориал в Россоши",
+    type: "Мемориал", era: "XX век", year: "1943",
+    address: "Площадь Победы, г. Россошь",
+    lat: 50.1542, lng: 39.5736,
+    desc: "Мемориал воинам, освободившим Россошь. Место расположения штаба итальянского Альпийского корпуса в 1942–1943 гг.",
+  },
+  {
+    id: 13, name: "Мемориал в Кантемировке",
+    type: "Мемориал", era: "XX век", year: "1942",
+    address: "Площадь Победы, г. Кантемировка",
+    lat: 49.7069, lng: 39.8931,
+    desc: "Место прорыва 17-го танкового корпуса в декабре 1942 года — будущей Кантемировской гвардейской дивизии.",
+  },
 ];
 
 const typeColors: Record<string, string> = {
@@ -30,21 +112,41 @@ const typeColors: Record<string, string> = {
   "Поле сражения": "#8B1A1A",
   "Укрепление": "#4A6741",
   "Мемориал": "#5B6FA8",
-  "Музей": "#7A6020",
+  "Музей": "#7A5C20",
 };
+
+const typeEmoji: Record<string, string> = {
+  "Крепость": "🏰",
+  "Поле сражения": "⚔️",
+  "Укрепление": "🛡️",
+  "Мемориал": "🕯️",
+  "Музей": "🏛️",
+};
+
+function buildYmapsUrl(points: MapPoint[], filter: string): string {
+  const visible = filter === "Все" ? points : points.filter((p) => p.type === filter);
+  const center = visible.length > 0
+    ? `${visible.reduce((s, p) => s + p.lng, 0) / visible.length},${visible.reduce((s, p) => s + p.lat, 0) / visible.length}`
+    : "39.2,51.5";
+
+  const ptParam = visible
+    .map((p) => `${p.lng},${p.lat},pm2rdm`)
+    .join("~");
+
+  return `https://yandex.ru/map-widget/v1/?ll=${center}&z=8&pt=${ptParam}&l=map`;
+}
 
 export default function MapPage() {
   const [selected, setSelected] = useState<MapPoint | null>(null);
-  const [hovered, setHovered] = useState<number | null>(null);
   const [filter, setFilter] = useState("Все");
 
   const types = ["Все", "Мемориал", "Крепость", "Укрепление", "Поле сражения", "Музей"];
-
-  const visiblePoints = filter === "Все" ? points : points.filter((p) => p.type === filter);
+  const visible = filter === "Все" ? points : points.filter((p) => p.type === filter);
+  const mapUrl = buildYmapsUrl(points, filter);
 
   return (
     <div className="pt-24 min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 pb-12">
         {/* Header */}
         <div className="mb-8 animate-stagger">
           <div className="flex items-center gap-3 mb-4">
@@ -52,153 +154,130 @@ export default function MapPage() {
             <span className="font-mono-ibm text-xs text-gold tracking-[0.3em] uppercase">Интерактивная карта</span>
           </div>
           <h1 className="font-oswald text-4xl md:text-6xl text-parchment">КАРТА ОБЪЕКТОВ</h1>
+          <p className="font-cormorant text-muted-foreground text-lg mt-2">
+            {visible.length} объектов на карте · Воронежская область
+          </p>
         </div>
 
-        {/* Filter */}
+        {/* Filters */}
         <div className="flex flex-wrap gap-2 mb-6">
           {types.map((t) => (
             <button
               key={t}
-              onClick={() => setFilter(t)}
-              className={`px-4 py-1.5 text-xs font-oswald tracking-wide uppercase border transition-colors ${
+              onClick={() => { setFilter(t); setSelected(null); }}
+              className={`flex items-center gap-1.5 px-4 py-1.5 text-xs font-oswald tracking-wide uppercase border transition-colors ${
                 filter === t
                   ? "border-gold bg-gold/10 text-gold"
-                  : "border-border text-muted-foreground hover:border-gold/50"
+                  : "border-border text-muted-foreground hover:border-gold/50 hover:text-parchment"
               }`}
             >
+              {t !== "Все" && <span>{typeEmoji[t]}</span>}
               {t}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 border border-border">
-          {/* Map area */}
-          <div className="lg:col-span-3 relative bg-secondary/20 overflow-hidden" style={{ minHeight: "560px" }}>
-            {/* Grid lines */}
-            <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-                  <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#C9973A" strokeWidth="0.5"/>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
+        {/* Main layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 border border-border" style={{ minHeight: "600px" }}>
 
-            {/* Stylized map silhouette of Russia */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-5">
-              <span className="font-oswald text-[20rem] text-gold leading-none select-none">ВО</span>
+          {/* Yandex Map iframe */}
+          <div className="lg:col-span-3 relative bg-secondary/30">
+            <iframe
+              key={filter}
+              src={mapUrl}
+              width="100%"
+              height="100%"
+              style={{ minHeight: "560px", border: "none", display: "block" }}
+              frameBorder="0"
+              allowFullScreen
+              title="Карта исторических объектов Воронежской области"
+            />
+            {/* Corner decorations */}
+            <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-gold/40 pointer-events-none" />
+            <div className="absolute top-3 right-3 w-6 h-6 border-t border-r border-gold/40 pointer-events-none" />
+            <div className="absolute bottom-3 left-3 w-6 h-6 border-b border-l border-gold/40 pointer-events-none" />
+            <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-gold/40 pointer-events-none" />
+          </div>
+
+          {/* Sidebar — object list */}
+          <div className="border-l border-border bg-background flex flex-col">
+            <div className="p-4 border-b border-border flex-shrink-0">
+              <p className="font-oswald text-xs tracking-[0.15em] uppercase text-muted-foreground mb-0.5">
+                Список объектов
+              </p>
+              <p className="font-mono-ibm text-xs text-gold">{visible.length} на карте</p>
             </div>
 
-            {/* Border decorations */}
-            <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-gold/30" />
-            <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-gold/30" />
-            <div className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-gold/30" />
-            <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-gold/30" />
+            <div className="flex-1 overflow-y-auto scrollbar-thin" style={{ maxHeight: "520px" }}>
+              {visible.map((point) => (
+                <button
+                  key={point.id}
+                  onClick={() => setSelected(selected?.id === point.id ? null : point)}
+                  className={`w-full text-left px-4 py-4 border-b border-border/40 transition-all group ${
+                    selected?.id === point.id
+                      ? "bg-secondary/50 border-l-2 border-l-gold"
+                      : "hover:bg-secondary/20"
+                  }`}
+                >
+                  <div className="flex items-start gap-2">
+                    <span className="text-base flex-shrink-0 mt-0.5">{typeEmoji[point.type] || "📍"}</span>
+                    <div className="flex-1 min-w-0">
+                      <p className={`font-oswald text-sm leading-tight mb-1 transition-colors ${
+                        selected?.id === point.id ? "text-gold" : "text-parchment group-hover:text-gold"
+                      }`}>
+                        {point.name}
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono-ibm text-xs text-gold/60">{point.year}</span>
+                        <span className="w-1 h-1 rounded-full bg-border flex-shrink-0" />
+                        <span className="font-mono-ibm text-xs text-muted-foreground truncate">{point.type}</span>
+                      </div>
+                    </div>
+                  </div>
 
-            {/* Legend */}
-            <div className="absolute bottom-6 left-6 space-y-2">
-              {Object.entries(typeColors).map(([t, color]) => (
-                <div key={t} className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full border-2" style={{ borderColor: color, backgroundColor: `${color}33` }} />
-                  <span className="font-mono-ibm text-xs" style={{ color }}>{t}</span>
-                </div>
+                  {/* Expanded info */}
+                  {selected?.id === point.id && (
+                    <div className="mt-3 pt-3 border-t border-border/50 animate-fade-in">
+                      <p className="font-cormorant text-sm text-muted-foreground leading-relaxed mb-3">
+                        {point.desc}
+                      </p>
+                      <div className="flex items-start gap-1.5 mb-3">
+                        <Icon name="MapPin" size={11} className="text-gold flex-shrink-0 mt-0.5" />
+                        <p className="font-mono-ibm text-xs text-muted-foreground leading-relaxed">{point.address}</p>
+                      </div>
+                      <a
+                        href={`https://yandex.ru/maps/?pt=${point.lng},${point.lat}&z=16&l=map`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-mono-ibm text-xs text-gold hover:text-parchment transition-colors border border-gold/30 hover:border-gold/60 px-3 py-1.5"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Icon name="ExternalLink" size={10} />
+                        Открыть в Яндекс.Картах
+                      </a>
+                    </div>
+                  )}
+                </button>
               ))}
             </div>
 
-            {/* Points */}
-            {visiblePoints.map((point) => (
-              <button
-                key={point.id}
-                onClick={() => setSelected(selected?.id === point.id ? null : point)}
-                onMouseEnter={() => setHovered(point.id)}
-                onMouseLeave={() => setHovered(null)}
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-                style={{ left: `${point.x}%`, top: `${point.y}%` }}
-              >
-                {/* Pulse ring */}
-                <div
-                  className="absolute inset-0 rounded-full animate-ping opacity-30"
-                  style={{ backgroundColor: typeColors[point.type] || "#C9973A" }}
-                />
-                {/* Dot */}
-                <div
-                  className="relative w-4 h-4 rounded-full border-2 transition-transform group-hover:scale-150"
-                  style={{
-                    borderColor: typeColors[point.type] || "#C9973A",
-                    backgroundColor: `${typeColors[point.type] || "#C9973A"}44`,
-                    transform: selected?.id === point.id ? "scale(1.5)" : undefined,
-                  }}
-                />
-                {/* Tooltip */}
-                {(hovered === point.id || selected?.id === point.id) && (
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap z-10 pointer-events-none">
-                    <div className="bg-background border border-gold/30 px-3 py-1.5 text-xs font-oswald text-parchment tracking-wide">
-                      {point.name}
-                      <div className="text-gold font-mono-ibm text-xs">{point.year}</div>
-                    </div>
-                    <div className="w-px h-3 bg-gold mx-auto" />
+            {/* Legend */}
+            <div className="p-4 border-t border-border flex-shrink-0 bg-secondary/10">
+              <p className="font-mono-ibm text-xs text-muted-foreground uppercase tracking-widest mb-3">Типы объектов</p>
+              <div className="space-y-1.5">
+                {Object.entries(typeColors).map(([t, color]) => (
+                  <div key={t} className="flex items-center gap-2">
+                    <span className="text-sm">{typeEmoji[t]}</span>
+                    <span className="font-cormorant text-xs text-muted-foreground">{t}</span>
                   </div>
-                )}
-              </button>
-            ))}
-          </div>
-
-          {/* Sidebar */}
-          <div className="border-l border-border bg-background">
-            <div className="p-5 border-b border-border">
-              <h3 className="font-oswald text-sm tracking-[0.15em] uppercase text-muted-foreground">
-                {selected ? "Объект" : "Выберите точку"}
-              </h3>
-            </div>
-
-            {selected ? (
-              <div className="p-5 animate-fade-in">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: typeColors[selected.type] || "#C9973A" }} />
-                  <span className="font-mono-ibm text-xs text-muted-foreground">{selected.type}</span>
-                </div>
-                <h2 className="font-oswald text-xl text-parchment mb-2 leading-tight">{selected.name}</h2>
-                <div className="text-gold font-mono-ibm text-2xl mb-4">{selected.year}</div>
-                <div className="space-y-3 pt-4 border-t border-border">
-                  <div>
-                    <span className="font-mono-ibm text-xs text-muted-foreground uppercase tracking-widest">Эпоха</span>
-                    <p className="font-cormorant text-parchment mt-1">{selected.era}</p>
-                  </div>
-                  <div>
-                    <span className="font-mono-ibm text-xs text-muted-foreground uppercase tracking-widest">Тип</span>
-                    <p className="font-cormorant text-parchment mt-1">{selected.type}</p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setSelected(null)}
-                  className="mt-6 w-full py-2 border border-border text-muted-foreground hover:border-gold hover:text-gold font-oswald text-xs tracking-wide uppercase transition-colors"
-                >
-                  Закрыть
-                </button>
-              </div>
-            ) : (
-              <div className="p-5 space-y-2 scrollbar-thin overflow-y-auto" style={{ maxHeight: "480px" }}>
-                {visiblePoints.map((point) => (
-                  <button
-                    key={point.id}
-                    onClick={() => setSelected(point)}
-                    className="w-full text-left p-3 border border-border/50 hover:border-gold/30 hover:bg-secondary/30 transition-colors group"
-                  >
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: typeColors[point.type] || "#C9973A" }} />
-                      <span className="font-mono-ibm text-xs text-gold">{point.year}</span>
-                    </div>
-                    <p className="font-oswald text-sm text-parchment group-hover:text-gold transition-colors">{point.name}</p>
-                    <p className="font-mono-ibm text-xs text-muted-foreground mt-0.5">{point.type}</p>
-                  </button>
                 ))}
               </div>
-            )}
+            </div>
           </div>
         </div>
 
-        <p className="text-center font-mono-ibm text-xs text-muted-foreground/40 mt-4">
-          Схематичное расположение объектов. Координаты условные.
+        <p className="font-mono-ibm text-xs text-muted-foreground/40 text-center mt-4">
+          Карта предоставлена Яндекс.Картами · Отметки на карте соответствуют реальным координатам объектов
         </p>
       </div>
     </div>
